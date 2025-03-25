@@ -1,0 +1,26 @@
+// getElementById 
+const heading2 = document.getElementById('heading');
+console.log(heading2);
+
+
+// querySelector va a retornar ya sea ninguno o hasta un elemento que concuerde con el selector .clase #id
+// En caso de tener más de un h2, podemos especificar por ejemplo: el h2 que esté en la clase header__texto
+const heading = document.querySelector('.header__texto h2');
+console.log(heading)
+
+// Modificamos el heading
+//heading.textContent = "Nuevo Heading";
+
+
+// querySelectorAll retorna 0 si el selector está mal o no hay ningún elemento, hasta todos los elementos que concuerden con el selector
+const enlaces = document.querySelectorAll('.navegacion a')
+console.log(enlaces);
+
+// Accedo solamente al primero para modificarle el texto
+//enlaces[0].textContent = "Nuevo texto para enlace"
+// Modificamos para que nos redirija a google
+//enlaces[0].href = 'https://google.com'
+// Agregar clase
+//enlaces[0].classList.add('nueva-clase')
+// Eliminar clase
+//enlaces[0].classList.remove('navegacion__enlace');
