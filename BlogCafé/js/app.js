@@ -24,3 +24,17 @@ console.log(enlaces);
 //enlaces[0].classList.add('nueva-clase')
 // Eliminar clase
 //enlaces[0].classList.remove('navegacion__enlace');
+
+// Generar código HTML con createElement
+const nuevoEnlace = document.createElement('A')
+// Agregar href
+nuevoEnlace.href = 'nuevo-enlace.html';
+// Agregar texto
+nuevoEnlace.textContent = 'Un nuevo enlace';
+// Agregar la clase
+nuevoEnlace.classList.add('navegacion__enlace');
+// Agregarlo al documento
+const navegacion = document.querySelector('.navegacion');
+navegacion.appendChild(nuevoEnlace);
+
+console.log(nuevoEnlace)
