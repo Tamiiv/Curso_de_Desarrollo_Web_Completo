@@ -61,3 +61,29 @@ btnEnviar.addEventListener('click', function(e){
     // target es a lo que le hemos dado click
     console.log(e.target);
 });
+
+
+// Eventos de los Inputs y Textarea
+
+const datos = {
+    nombre: '',
+    email: '',
+    mensaje: ''
+}
+
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+
+nombre.addEventListener('input', leerTexto)
+    
+email.addEventListener('input', leerTexto)
+
+mensaje.addEventListener('input', leerTexto)
+
+function leerTexto(e){
+    // El nombre de las propiedades de mi objeto tiene que ser igual al del id del input
+    datis[e.target] = e.target.value;
+
+    console.log(e.target.value);
+}
