@@ -51,3 +51,13 @@ window.addEventListener('DOMContentLoaded', function(){ // DOMContentLoaded espe
 });
 
 console.log(4)
+
+// Seleccionar elementos y asociarles un evento
+const btnEnviar = document.querySelector('.boton--primario');
+btnEnviar.addEventListener('click', function(e){
+    console.log('Enviando formulario');
+    // e -> evento que se pasa en automático hacía el callback cuando registramos una función con addEventListener
+    e.preventDefault();
+    // target es a lo que le hemos dado click
+    console.log(e.target);
+});
