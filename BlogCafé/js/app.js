@@ -1,20 +1,25 @@
 // getElementById 
+/*
 const heading2 = document.getElementById('heading');
 console.log(heading2);
-
+*/
 
 // querySelector va a retornar ya sea ninguno o hasta un elemento que concuerde con el selector .clase #id
 // En caso de tener más de un h2, podemos especificar por ejemplo: el h2 que esté en la clase header__texto
+/*
 const heading = document.querySelector('.header__texto h2');
 console.log(heading)
+*/
 
 // Modificamos el heading
 //heading.textContent = "Nuevo Heading";
 
 
 // querySelectorAll retorna 0 si el selector está mal o no hay ningún elemento, hasta todos los elementos que concuerden con el selector
+/*
 const enlaces = document.querySelectorAll('.navegacion a')
 console.log(enlaces);
+*/
 
 // Accedo solamente al primero para modificarle el texto
 //enlaces[0].textContent = "Nuevo texto para enlace"
@@ -42,6 +47,7 @@ console.log(enlaces);
 // Evento JS
 //console.log(1)
 
+/*
 window.addEventListener('load', function(){ // load espera a que el JS y los archivos que dependen del HTML estén listos
     console.log(2)
 });
@@ -51,8 +57,10 @@ window.addEventListener('DOMContentLoaded', function(){ // DOMContentLoaded espe
 });
 
 console.log(4)
+*/
 
 // Seleccionar elementos y asociarles un evento
+/*
 const btnEnviar = document.querySelector('.boton--primario');
 btnEnviar.addEventListener('click', function(e){
     console.log('Enviando formulario');
@@ -61,6 +69,7 @@ btnEnviar.addEventListener('click', function(e){
     // target es a lo que le hemos dado click
     console.log(e.target);
 });
+*/ 
 
 
 // Eventos de los Inputs y Textarea
@@ -74,12 +83,18 @@ const datos = {
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
 
-nombre.addEventListener('input', leerTexto)
-    
+nombre.addEventListener('input', leerTexto) 
 email.addEventListener('input', leerTexto)
-
 mensaje.addEventListener('input', leerTexto)
+// El Evento de Submit - Es importante tener un button o input de tipo submit para enviar/ejecutar los formularios
+formulario.addEventListener('submit', function(e){
+
+    e.preventDefault();
+    console.log('Enviando formulario...')
+});
+
 
 function leerTexto(e){
     // El nombre de las propiedades de mi objeto tiene que ser igual al del id del input
