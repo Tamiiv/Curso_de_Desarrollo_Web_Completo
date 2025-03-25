@@ -26,15 +26,28 @@ console.log(enlaces);
 //enlaces[0].classList.remove('navegacion__enlace');
 
 // Generar código HTML con createElement
-const nuevoEnlace = document.createElement('A')
+//const nuevoEnlace = document.createElement('A')
 // Agregar href
-nuevoEnlace.href = 'nuevo-enlace.html';
+//nuevoEnlace.href = 'nuevo-enlace.html';
 // Agregar texto
-nuevoEnlace.textContent = 'Un nuevo enlace';
+//nuevoEnlace.textContent = 'Un nuevo enlace';
 // Agregar la clase
-nuevoEnlace.classList.add('navegacion__enlace');
+//nuevoEnlace.classList.add('navegacion__enlace');
 // Agregarlo al documento
-const navegacion = document.querySelector('.navegacion');
-navegacion.appendChild(nuevoEnlace);
+//const navegacion = document.querySelector('.navegacion');
+//navegacion.appendChild(nuevoEnlace);
 
-console.log(nuevoEnlace)
+//console.log(nuevoEnlace)
+
+// Evento JS
+//console.log(1)
+
+window.addEventListener('load', function(){ // load espera a que el JS y los archivos que dependen del HTML estén listos
+    console.log(2)
+});
+
+window.addEventListener('DOMContentLoaded', function(){ // DOMContentLoaded espera que solo cargue el HTML, pero no espera los demás archivos. Carga más rápido y solo requerimos el html
+    console.log(3)
+});
+
+console.log(4)
