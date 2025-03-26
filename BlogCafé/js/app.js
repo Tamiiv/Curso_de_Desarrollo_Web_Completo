@@ -90,15 +90,50 @@ email.addEventListener('input', leerTexto)
 mensaje.addEventListener('input', leerTexto)
 // El Evento de Submit - Es importante tener un button o input de tipo submit para enviar/ejecutar los formularios
 formulario.addEventListener('submit', function(e){
-
     e.preventDefault();
-    console.log('Enviando formulario...')
+
+    // Validar formulario
+    const { nombre, email, mensaje} = datos;
+    if(nombre === '' || email === '' || mensaje === ''){
+        mostrarError('Todos los campos son obligatorios');
+        return;
+    }
+
+
+    // Enviar formulario
+    mostrarMensajeEnviado('Datos enviados correctamente')
 });
 
 
 function leerTexto(e){
     // El nombre de las propiedades de mi objeto tiene que ser igual al del id del input
-    datis[e.target] = e.target.value;
+    datos[e.target.id] = e.target.value;
+}
 
-    console.log(e.target.value);
+// Muestra un error en pantalla
+function mostrarError(mensaje){
+    const error = document.createElement('P');
+    error.textContent = mensaje;
+    error.classList.add('error');
+
+    formulario.appendChild(error);
+
+    // Desaparezca después de 5 segundos
+    setTimeout(() => {
+        error.remove();
+    }, 5000);
+}
+
+// Muestra enviado en pantalla
+function mostrarMensajeEnviado(mensaje){
+    const enviado = document.createElement('P');
+    enviado.textContent = mensaje;
+    enviado.classList.add('enviado');
+
+    formulario.appendChild(enviado);
+
+    // Desaparezca después de 5 segundos
+    setTimeout(() => {
+        enviado.remove();
+    }, 5000);
 }
