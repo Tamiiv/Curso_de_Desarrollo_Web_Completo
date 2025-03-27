@@ -1,0 +1,31 @@
+{
+  "name": "festivalmusica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS y NPM",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tamiiv/Curso_de_Desarrollo_Web_Completo.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp"
+  ],
+  "author": "Tamara Vera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tamiiv/Curso_de_Desarrollo_Web_Completo/issues"
+  },
+  "homepage": "https://github.com/Tamiiv/Curso_de_Desarrollo_Web_Completo#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.86.0"
+  }
+}
