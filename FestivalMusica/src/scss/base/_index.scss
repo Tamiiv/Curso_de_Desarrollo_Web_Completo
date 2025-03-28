@@ -1,0 +1,6 @@
+// Podemos usar use o forward para acceder a los contenidos que esta en base
+// Normalize va primero porque normaliza los datos
+@forward 'normalize';
+// Luego las variables para usarlas en globales
+@forward 'variables';
+@forward 'globales';

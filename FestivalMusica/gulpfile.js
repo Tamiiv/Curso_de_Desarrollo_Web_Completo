@@ -6,12 +6,13 @@ const sass = gulpSass(dartSass);
 
 export function css(done){
     src('src/scss/app.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(dest('build/css'))
     
     done()
 }
 
 export function dev(){
-    watch('src/scss/app.scss', css)
+    // Va a buscar todos los archivos que tenga la extensión scss dentro de la carpeta scss
+    watch('src/scss/**/*.scss', css)
 }
