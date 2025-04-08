@@ -24,8 +24,13 @@
   },
   "homepage": "https://github.com/Tamiiv/Curso_de_Desarrollo_Web_Completo#readme",
   "devDependencies": {
+    "glob": "^11.0.1",
     "gulp": "^5.0.0",
     "gulp-sass": "^6.0.1",
-    "sass": "^1.86.0"
+    "sass": "^1.86.0",
+    "sharp": "^0.34.1"
+  },
+  "dependencies": {
+    "gulp-terser": "^2.1.0"
   }
 }
