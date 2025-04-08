@@ -588,10 +588,10 @@ body > section {
   background-color: rgba(0, 0, 0, 0.5);
   display: grid;
   place-items: center;
-  animation: fadeIn ease-in 0.05s;
+  animation: fadeIn ease-in 0.5s;
 }
 .modal.fade-out {
-  animation: fadeOut ease-in 0.05s;
+  animation: fadeOut ease-in 0.5s;
 }
 .modal img {
   max-width: 100rem;

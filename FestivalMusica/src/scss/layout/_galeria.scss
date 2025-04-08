@@ -3,22 +3,17 @@
 
 .galeria {
     @include m.contenedor;
-
     &-imagenes {
         @include m.grid(1, 2rem);
-
         @include m.telefono {
             @include m.grid(2, 2rem);
         }
-
         @include m.tablet {
             @include m.grid(3, 2rem);
         }
-
         @include m.desktop {
             @include m.grid(4, 2rem);
         }
-
         // Para que todas las imagenes tengan el mismo tamaño
         img {
             height: 20rem;
@@ -31,15 +26,14 @@
     // Con fixed el elemento queda fijo 
     position: fixed;
     inset: 0;
-    background-color: rgba(v.$negro, $alpha: 0.5);
+    background-color: rgba(v.$negro, 0.5);
     display: grid;
     place-items: center;
-    animation: fadeIn ease-in 0.05s;
+    animation: fadeIn ease-in 0.5s;
 
     &.fade-out {
-        animation: fadeOut ease-in 0.05s;
+        animation: fadeOut ease-in 0.5s;
     }
-
     // Limitamos el tamaño para que no ocupe toda la pantalla
     img {
         max-width: 100rem;
@@ -63,8 +57,7 @@
     0% {
         opacity: 0;
     }
-
-    100% {
+    100%  {
         opacity: 1;
     }
 }
@@ -73,8 +66,7 @@
     0% {
         opacity: 1;
     }
-
-    100% {
+    100%  {
         opacity: 0;
     }
 }
