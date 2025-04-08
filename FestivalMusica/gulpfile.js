@@ -23,7 +23,7 @@ export function css(done) {
 export function dev() {
     // Va a buscar todos los archivos que tenga la extensión scss dentro de la carpeta scss
     watch('src/scss/**/*.scss', css)
-    watch('src/js/**/*.jd', js)
+    watch('src/js/**/*.js', js)
 }
 
 export default series(js, css, dev)
